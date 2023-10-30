@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price in Nigeria</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div style="width: 100%; height: 100%; position: relative; background: white">
+        
+        
+        <img style="width: 659px; height: 530px; left: 50px; top: 103px; position: absolute; border-top-left-radius: 20px; border-top-right-radius: 20px" src="/static/house.jpg" />
+        <div style="width: 562px; height: 530px; left: 712px; top: 103px; position: absolute">
+            
+            
+            <div style="width: 562px; height: 530px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
+            <div style="width: 562px; height: 512px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"></div>
+            <div class = 'form' style="width: 562px; height: 512px; left: 0px; top: 0px; position: absolute">
+            <form method="POST", action="/price">
 
+
+                <div style="width: 120.05px; height: 23.65px; left: 29.41px; top: 20px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">Bedrooms:</div>
+                <div style="width: 120.50px; height: 23.65px; left: 29.41px; top: 82px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">Bathrooms:</div>
+                <div style="width: 120.78px; height: 23.65px; left: 29.41px; top: 139px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">Toilet:</div>
+                <div style="width: 120.04px; height: 51.30px; left: 29.41px; top: 195px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">Parking <br/>Space:</div>
+                <div style="width: 120.80px; height: 23.65px; left: 29.41px; top: 269px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">House Type:</div>
+                <div style="width: 120px; height: 23.65px; left: 29.41px; top: 330px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">State:</div>    
+                <div style="width: 120.02px; height: 23.65px; left: 29.41px; top: 392px; position: absolute; color: black; font-size: 20px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">City:</div>
+                
+                
+                <input style="width: 150px; height: 41px; left: 29.41px; top: 460px;position: absolute; background: #0463CA; border-radius: 10px; font-size: 20px; font-family: Arsenal; font-weight: 700; word-wrap: break-word; color: white; border: 0" type="submit" value="Estimate Price" id="submit">
+                <input style="width: 321px; height: 52px; left: 200px; top: 4px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; color: black;; border: 0" type="text", name = 'a' placeholder="e.g 2", required>
+                <input style="width: 321px; height: 52px; left: 200px; top: 66px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0" type="text", name = 'b' placeholder="e.g 4", required>
+                <input style="width: 321px; height: 52px; left: 200px; top: 127px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0"type="text", name = 'c' placeholder="e.g 1", required>
+                <input style="width: 321px; height: 52px; left: 200px; top: 190px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0" type="text", name = 'd' placeholder="e.g 2", required>
+               
+               
+                <select id="dropdown" name = 'house' style="width: 321px; height: 52px; left:200px; top: 255px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0;padding: 0px">
+                    <option value="0" name = 'Block of Flats'>Block of Flats</option>
+                    <option value="1" name = 'Detached Bungalow'>Detached Bungalow</option>
+                    <option value="2" name = 'Detached Duplex'>Detached Duplex</option>
+                    <option value="3" name = 'Semi Detached Bungalow'>Semi Detached Bungalow</option>
+                    <option value="4" name = 'Semi Detached Duplex'>Semi Detached Duplex</option>
+                    <option value="5" name = 'Terraced Bungalow'>Terraced Bungalow</option>
+                    <option value="6" name = 'Terraced Duplexes'>Terraced Duplexes</option>
+                    
+                </select>
+                
+                <script src="/static/js.js"></script>
+
+
+                <select id="state-dropdown" name="state" style ="width: 321px; height: 52px; left:200px; top: 314px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0;padding: 0px">
+                    <option value="0" name = 'Abia'>Abia</option>
+                    <option value="1" name = 'Abuja'>Abuja</option>  
+                    <option value="2" name = 'Akwa_Ibom'>Akwa Ibom</option>
+                    <option value="3" name = 'Anambra'>Anambra</option>
+                    <option value="4" name = 'Bayelsa'>Bayelsa</option>
+                    <option value="5" name = 'Borno'>Borno</option>
+                    <option value="6" name = 'Cross_River'>Cross River</option>
+                    <option value="7" name = 'Delta'>Delta</option>
+                    <option value="8" name = 'Edo'>Edo</option>
+                    <option value="9" name = 'Ekiti'>Ekiti</option>
+                    <option value="10" name = 'Enugu'>Enugu</option>
+                    <option value="11" name = 'Imo'>Imo</option>
+                    <option value="12" name = 'Kaduna'>Kaduna</option>
+                    <option value="13" name = 'Kano'>Kano</option>
+                    <option value="14" name = 'Katsina'>Katsina</option>
+                    <option value="15" name = 'Kogi'>Kogi</option>
+                    <option value="16" name = 'Kwara'>Kwara</option>
+                    <option value="17" name = 'Lagos'>Lagos</option>
+                    <option value="18" name = 'Nassarawa'>Nassarawa</option>
+                    <option value="19" name = 'Niger'>Niger</option>
+                    <option value="20" name = 'Ogun'>Ogun</option>
+                    <option value="21" name = 'Osun'>Osun</option>
+                    <option value="22" name = 'Oyo'>Oyo</option>
+                    <option value="23" name = 'Plateau'>Plateau</option>
+                    <option value="24" name = 'Rivers'>Rivers</option>
+                
+                </select>
+
+                
+                <select id="city-dropdown" name = 'city' style="width: 321px; height: 52px; left:200px; top: 376px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; border: 0;padding: 0px">
+                    <option value="" disabled selected>Select a city</option>
+                    
+                </select>
+                
+
+                <script src="/static/second.js"></script> 
+                <div style="width: 150px; height: 41px; left: 200px; top: 470px;position: absolute;  border-radius: 10px; font-size: 20px; font-family: Arsenal; font-weight: 700; word-wrap: break-word; color: black; border: 0">
+                    {% if data %}
+                        {{ data }}
+                    {% endif %}
+                </div>
+                
+
+
+            </form>
+            </div>
+        </div>
+        <div style="left: 462px; top: 50px; position: absolute; text-align: center; color: black; font-size: 30px; font-family: Arsenal; font-weight: 400; word-wrap: break-word">HOUSE PRICE IN NIGERIA</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    
